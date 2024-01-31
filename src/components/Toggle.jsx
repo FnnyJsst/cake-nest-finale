@@ -14,7 +14,7 @@ export default function Toggle({ label, toggled, onClick}) {
             <label>
                 <input type="checkbox" defaultChecked={isToggled} onClick={callback} />
                 <span >
-                <p>{label}</p>
+                <p>{isToggled ? "Désactiver le mode admin" : "Activer le mode admin"}</p>
                 </span>
             </label>
         </ToggleStyled>
@@ -28,11 +28,11 @@ const ToggleStyled = styled.div`
     label {
         position: relative;
         display: inline-block;
-        width: 20vh;;
+        width: 21vh;;
         height: 30px;
         color: ${theme.colors.primary};
         font-family: "Open Sans", sans-serif;
-        font-size: ${theme.fonts.size.XXS};
+        font-size: ${theme.fonts.size.XXXS};
     
     }
 
@@ -69,13 +69,16 @@ const ToggleStyled = styled.div`
         border-radius: 50%;
         transition: 0.3s;
     }
+    
 
         input:checked + span {
-            background-color: ${theme.colors.dark};
+            background-color: ${theme.colors.white};
+            border: 1px solid ${theme.colors.primary};
         }
 
+
         input:checked + span:before {
-            transform: translateX(111px);
+            transform: translateX(120px);
         }
 
         p {
