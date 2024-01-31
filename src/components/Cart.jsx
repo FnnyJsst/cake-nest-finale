@@ -30,6 +30,7 @@ const CartStyles = styled.div`
     margin-left: 5vh;
     margin-right: 5vh;
     margin-top: 7vh;
+    width: 25vh;
 
 
     img {

@@ -4,6 +4,7 @@ import styled from "styled-components"
 import { theme } from "../theme"
 
 export default function Navbar ( {username}) {
+ 
     return (
         <>  
             <NavBarStyled>
