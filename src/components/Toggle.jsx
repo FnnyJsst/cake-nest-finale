@@ -1,13 +1,16 @@
 import { useState } from 'react';
 import styled from 'styled-components';
 import { theme } from '../theme';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function Toggle({ label, toggled, onClick}) {
-    const [isToggled, toggle] = useState(toggled)
+    const [isToggled, toggle] = useState(false)
 
     const callback = () => {
         toggle(!isToggled)
         onClick(!isToggled)
+        toast(isToggled ? null : "Mode admin activé ")
     }
     return (
         <ToggleStyled>
@@ -17,6 +20,7 @@ export default function Toggle({ label, toggled, onClick}) {
                 <p>{isToggled ? "Désactiver le mode admin" : "Activer le mode admin"}</p>
                 </span>
             </label>
+            <ToastContainer />
         </ToggleStyled>
     )
 }
@@ -28,7 +32,7 @@ const ToggleStyled = styled.div`
     label {
         position: relative;
         display: inline-block;
-        width: 21vh;;
+        width: 22vh;;
         height: 30px;
         color: ${theme.colors.primary};
         font-family: "Open Sans", sans-serif;
@@ -64,7 +68,7 @@ const ToggleStyled = styled.div`
         height: 23px;
         width: 23px;
         left: 4px; 
-        bottom: 2.6px;
+        bottom: 3px;
         background-color: ${theme.colors.primary};
         border-radius: 50%;
         transition: 0.3s;
@@ -78,7 +82,7 @@ const ToggleStyled = styled.div`
 
 
         input:checked + span:before {
-            transform: translateX(120px);
+            transform: translateX(125px);
         }
 
         p {
