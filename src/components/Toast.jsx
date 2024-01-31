@@ -1,10 +1,14 @@
 import { ToastContainer, toast } from 'react-toastify';
+
 import 'react-toastify/dist/ReactToastify.css';
 
 export default function ToastComponent() {
-  const notify = (message) => toast(message);
 
-  return (
-      <ToastContainer />
-  );
+
+    return (
+
+            <ToastContainer className="toast"/>
+     
+    );
 }
+

@@ -10,7 +10,7 @@ export default function Toggle({ label, toggled, onClick}) {
     const callback = () => {
         toggle(!isToggled)
         onClick(!isToggled)
-        toast(isToggled ? null : "Mode admin activé ")
+        toast.info(isToggled ? null : "Mode admin activé ")
     }
     return (
         <ToggleStyled>
@@ -20,7 +20,7 @@ export default function Toggle({ label, toggled, onClick}) {
                 <p>{isToggled ? "Désactiver le mode admin" : "Activer le mode admin"}</p>
                 </span>
             </label>
-            <ToastContainer />
+            <ToastContainer position="bottom-right" theme="dark"/>
         </ToggleStyled>
     )
 }
