@@ -5,19 +5,16 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 export default function Toggle({ label, toggled, onClick}) {
-    const [isToggled, toggle] = useState(false)
-
     const callback = () => {
-        toggle(!isToggled)
-        onClick(!isToggled)
-        toast.info(isToggled ? null : "Mode admin activé ")
+        onClick(!toggled)
+        toast.info(toggled ? "Mode admin désactivé" : "Mode admin activé ")
     }
     return (
         <ToggleStyled>
             <label>
-                <input type="checkbox" defaultChecked={isToggled} onClick={callback} />
+                <input type="checkbox" checked={toggled} onChange={callback} />
                 <span >
-                <p>{isToggled ? "Désactiver le mode admin" : "Activer le mode admin"}</p>
+                <p>{toggled ? "Désactiver le mode admin" : "Activer le mode admin"}</p>
                 </span>
             </label>
             <ToastContainer position="bottom-right" theme="dark"/>
