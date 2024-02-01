@@ -1,4 +1,3 @@
-import React from 'react';
 import NavBar from './NavBar';
 import { theme } from '../theme';
 import styled from 'styled-components';
@@ -7,16 +6,20 @@ import Main from './Main';
 import { useAdmin } from './admin/AdminContext';
 import Tabs from './admin/Tabs';
 
-export default function OrderPage(props) {
+export default function OrderPage() {
+//useParams permet de récupérer les paramètres de l'url
   const { username } = useParams();
+//useAdmin permet de récupérer les informations du contexte AdminContext
   const { isAdmin, allowedPages } = useAdmin();
 
   return (
+  //isAdmin est un boolean qui permet de savoir si l'utilisateur est admin ou non. Si il est admin, on affiche les tabs
+  //&& : si isAdmin est true, on affiche les tabs  
     <OrderPageStyled>
       <div className ='container'>
         <NavBar username={username} />
-        {isAdmin && <Tabs allowedPages={allowedPages} />}
         <Main />
+        {isAdmin && <Tabs allowedPages={allowedPages} />}
       </div>
     </OrderPageStyled>
   );

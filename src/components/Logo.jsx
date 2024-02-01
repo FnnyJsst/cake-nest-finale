@@ -28,8 +28,6 @@ const LogoStyle = styled.span`
         font-size: ${theme.fonts.size.P3};
     }
 
-
     img {
         width: 30px;
-    }
-`
+    }`

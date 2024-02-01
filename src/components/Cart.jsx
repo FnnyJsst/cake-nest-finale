@@ -11,8 +11,7 @@ export default function Cart({item}) {
                 <img src={item.imageSource} alt={item.title}></img>
                 <h4>{item.title}</h4>
                 <PriceWrapper>
-                    <p>{formatedprice
-                    }</p>
+                    <p>{formatedprice}</p>
                     <button>Ajouter</button>
                 </PriceWrapper>
             </CartStyles>
@@ -39,7 +38,6 @@ const CartStyles = styled.div`
     }
 
     h4 {
-
         font-family: "Pacifico", sans-serif;
         margin-left: 4vh;
         margin-bottom: 3vh;
@@ -48,10 +46,8 @@ const CartStyles = styled.div`
             font-family: "Pacifico" ;
             src: url("../../public/Pacifico-Regular.ttf");
         }
-        
-      
-    }
-`
+    }`
+
 const PriceWrapper = styled.div`
     display: flex;
     flex-direction: row;

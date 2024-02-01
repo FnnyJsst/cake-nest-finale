@@ -3,7 +3,7 @@ import Rightside from "./RightSide"
 import styled from "styled-components"
 import { theme } from "../theme"
 
-export default function Navbar ( {username}) {
+export default function Navbar ( {username} ) {
  
     return (
         <>  
@@ -21,7 +21,7 @@ const NavBarStyled = styled.div`
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
-    height: 15vh;
+    height: 14vh;
     border-bottom: 1px solid #E5E5E5;
     background-color: #FFFFFF;
     position: sticky;

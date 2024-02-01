@@ -1,4 +1,3 @@
-import React from 'react';
 import Profile from "./Profile";
 import Toggle from "./Toggle";
 import styled from "styled-components";
@@ -20,5 +19,4 @@ export default function RightSide({ username }) {
 
 const RightSideStyles = styled.div`
     display: flex;
-    flex-direction: row;
-`;
+    flex-direction: row;`

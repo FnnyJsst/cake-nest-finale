@@ -4,19 +4,15 @@ import { fakeMenu } from "../fakeData/fakeMenu";
 import { useState } from "react";
 
 export default function Main() {
-    const [page, setPage] = useState(0);
-    const itemsPerPage = 4;
-
-    fakeMenu.slice(page * itemsPerPage, (page + 1) * itemsPerPage);
+   
     return (
         <>
             <MainStyled>
                 <CartContainerStyles>
                 {fakeMenu.map((item, index) => (
-                <Cart key={index} item={item} />
+                    <Cart key={index} item={item} />
             ))}
                 </CartContainerStyles>
-         
             </MainStyled>
         </>
     )

@@ -7,11 +7,11 @@ export default function LoginPage () {
     return (
         <>
             <LoginPageStyles>
-            <LoginPageSpan>
+                <LoginPageSpan>
                     <h1>CAKE</h1>
-                    <img src="/images/cupcake.png" alt="cake" />
+                    <img src="/images/cupcake.png" alt="cupcake" />
                     <h1>NEST</h1>
-            </LoginPageSpan>
+                </LoginPageSpan>
                 <LoginForm />
             </LoginPageStyles>
         </>
@@ -27,8 +27,6 @@ const LoginPageStyles = styled.div`
     background-position: center;
     height: 100vh;
     width: 100vw;
-
-
 `
 
 const LoginPageSpan = styled.span`
@@ -44,7 +42,6 @@ const LoginPageSpan = styled.span`
         font-family: sans-serif;
         font-size: ${theme.fonts.size.P5};
     }
-
 
     img {
         width: 50px;

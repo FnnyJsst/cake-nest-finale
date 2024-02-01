@@ -23,7 +23,6 @@ export default function Toggle({ label, toggled, onClick}) {
 }
 
 const ToggleStyled = styled.div`
-
     margin-right: 5vh;
     
     label {
@@ -34,7 +33,6 @@ const ToggleStyled = styled.div`
         color: ${theme.colors.primary};
         font-family: "Open Sans", sans-serif;
         font-size: ${theme.fonts.size.XXXS};
-    
     }
 
     input {
@@ -55,8 +53,7 @@ const ToggleStyled = styled.div`
         border-radius: 30px;
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        
+        justify-content: center;  
     }
 
     span:before {
@@ -70,19 +67,16 @@ const ToggleStyled = styled.div`
         border-radius: 50%;
         transition: 0.3s;
     }
-    
 
-        input:checked + span {
-            background-color: ${theme.colors.white};
-            border: 1px solid ${theme.colors.primary};
-        }
+    input:checked + span {
+        background-color: ${theme.colors.white};
+        border: 1px solid ${theme.colors.primary};
+    }
 
+    input:checked + span:before {
+        transform: translateX(125px);
+    }
 
-        input:checked + span:before {
-            transform: translateX(125px);
-        }
-
-        p {
-            margin-left: 4vh;
-        }
-    `
+    p {
+        margin-left: 4vh;
+    }`

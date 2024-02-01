@@ -10,7 +10,6 @@ import { AdminProvider } from './components/admin/AdminContext';
 function App() {
 
   return (
-    
       <AdminProvider>
         <Routes>
           <Route path="/" element={<LoginPage />} />
@@ -18,7 +17,6 @@ function App() {
           <Route path="/*" element={<ErrorPage />} />
         </Routes>
       </AdminProvider>
-    
   )
 }
 
