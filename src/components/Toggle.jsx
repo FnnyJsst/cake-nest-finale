@@ -6,8 +6,10 @@ import 'react-toastify/dist/ReactToastify.css';
 
 export default function Toggle({ label, toggled, onClick}) {
     const callback = () => {
-        onClick(!toggled)
-        toast.info(toggled ? "Mode admin désactivé" : "Mode admin activé ")
+        onClick(!toggled);
+        if (!toggled) {
+            toast.info("Mode admin activé");
+        }
     }
     return (
         <ToggleStyled>
@@ -78,5 +80,5 @@ const ToggleStyled = styled.div`
     }
 
     p {
-        margin-left: 4vh;
+        margin-left: 5vh;
     }`

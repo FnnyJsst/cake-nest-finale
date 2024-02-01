@@ -20,6 +20,8 @@ export default function Main() {
 
 const MainStyled = styled.div`
     overflow: auto;
+    background-color: white;
+    z-index: 1;
    `
 
 const CartContainerStyles = styled.div`

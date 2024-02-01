@@ -6,6 +6,7 @@ import Main from './Main';
 import { useAdmin } from './admin/AdminContext';
 import Tabs from './admin/Tabs';
 
+
 export default function OrderPage() {
 //useParams permet de récupérer les paramètres de l'url
   const { username } = useParams();
@@ -31,16 +32,17 @@ const OrderPageStyled = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 0;
 
   .container {
     height: 95vh;
     width: 1400px;
     display: flex;
     flex-direction: column;
-    background-color: white;
+    
     border-radius: ${theme.borderRadius.round};
     box-shadow: 15px 27px 63px -36px rgba(0, 0, 0, 0.7) inset;
     -webkit-box-shadow: 15px 27px 63px -36px rgba(0, 0, 0, 0.7) inset;
     -moz-box-shadow: 15px 27px 63px -36px rgba(0, 0, 0, 0.7) inset;
   }
-`;
+`

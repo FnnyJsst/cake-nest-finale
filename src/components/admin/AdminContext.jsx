@@ -5,6 +5,7 @@ const AdminContext = createContext();
 export const AdminProvider = ({ children }) => {
   const [isAdmin, setIsAdmin] = useState(false);
   const [showTabs, setShowTabs] = useState(false);
+  
   const allowedPages = ['add-product', 'edit-product'];
 
   const toggleAdminStatus = () => {
@@ -12,12 +13,7 @@ export const AdminProvider = ({ children }) => {
   };
 
   const toggleShowTabs = () => {
-    console.log('toggleShowTabs was called');
-    setShowTabs(prevShowTabs => {
-      console.log('showTabs is currently', prevShowTabs);
-      console.log('showTabs will be set to', !prevShowTabs);
-      return !prevShowTabs;
-    });
+    setShowTabs(prevShowTabs => !prevShowTabs);
   };
 
   return (
@@ -29,8 +25,5 @@ export const AdminProvider = ({ children }) => {
 
 export const useAdmin = () => {
   const context = useContext(AdminContext);
-  if (context === undefined) {
-    throw new Error('useAdmin must be used within a AdminProvider');
-  }
   return context;
 };

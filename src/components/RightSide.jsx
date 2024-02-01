@@ -9,7 +9,7 @@ export default function RightSide({ username }) {
     return (
         <RightSideStyles>
             <Toggle
-                label="Activer le mode admin"
+                label="Activer le mode admin" 
                 toggled={isAdmin}
                 onClick={toggleAdminStatus} />
             <Profile username={username}  />
